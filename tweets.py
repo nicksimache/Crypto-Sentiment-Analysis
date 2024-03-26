@@ -1,5 +1,6 @@
 import pandas as pd
 import requests
+import sqlite3
 
 twitter_data = []
 
@@ -18,4 +19,4 @@ for tweet in all_tweets:
     twitter_data.append(tweet)
     
 df = pd.DataFrame(twitter_data)
-df.to_json('tweets1.json', orient='index')
+df.to_csv('tweets1.csv')
